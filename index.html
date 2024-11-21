@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIM GAME</title>
+    <link rel="stylesheet" href="nim.css">
+</head>
+
+<body>
+
+    <div class="mainDiv">
+        <div class="win-effect hide">
+            <button id="X">X</button>
+            <h1 class="win-effect-H1"></h1>
+            <div class="firework"></div>
+            <div class="firework"></div>
+            <div class="firework"></div>
+        </div>
+        <div class="container">
+            <div class="select-mode">
+
+                <!-- EZ MODE -->
+                <button class="mode1">
+                    <p class="par"> E A Z Y - M O D E</p>
+                    <div id="clip">
+                        <div id="leftTop" class="corner"></div>
+                        <div id="rightBottom" class="corner"></div>
+                        <div id="rightTop" class="corner"></div>
+                        <div id="leftBottom" class="corner"></div>
+                    </div>
+                    <span id="rightArrow" class="arrow"></span>
+                    <span id="leftArrow" class="arrow"></span>
+                </button>
+                <!-- IMPOSIBLE/HARD MODE -->
+                <button class="mode2">
+                    <p class="par"> H A R D - M O D E</p>
+                    <div id="clip">
+                        <div id="leftTop" class="corner"></div>
+                        <div id="rightBottom" class="corner"></div>
+                        <div id="rightTop" class="corner"></div>
+                        <div id="leftBottom" class="corner"></div>
+                    </div>
+                    <span id="rightArrow" class="arrow"></span>
+                    <span id="leftArrow" class="arrow"></span>
+                </button>
+                </button>
+            </div>
+
+            <div class="choose-settings hide">
+                <h1>Choose settings</h1>
+
+                <div>
+                    <div class="settingsDiv"></div>
+                    <br>
+                    <form action="settings">
+                        <div>
+                            <label for="max-num">enter max number</label>
+                            <input type="number" id="max-num" required>
+                        </div>
+
+                        <p>who starts the game?</p>
+                        <div>
+                            <input type="radio" id="playerStart" class="playerStart" value="player" name="who_starts"
+                                required>
+                            <label for="playerStart">Player</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="computerStart" class="computerStart" value="computer"
+                                name="who_starts" required>
+                            <label for="computerStart">Computer</label>
+                        </div>
+
+
+                        <button class="starting">START GAME</button>
+                    </form>
+
+                </div>
+
+                <button class="back">back</button>
+            </div>
+
+            <div class="starting-game hide">
+
+                <div class="modeg1 hide">
+                    <h1>Eazy Mode</h1>
+                    <div class="stickPile"></div>
+                    <div class="output">0</div>
+                    <input type="number" id="input-number">
+                    <div class="stickleft"></div>
+                    <div class="maxSticks"></div>
+                    <button class="play plbtn">play</button>
+                    <button class="restart rsbtn">restart</button>
+                </div>
+
+                <div class="modeg2 hide">
+                    <h1>Hard Mode</h1>
+                    <div class="output2">0</div>
+                    <input type="number" id="input-number2">
+                    <div class="stickleft2"></div>
+                    <div class="stickPile2"></div>
+                    <div class="maxSticks2"></div>
+                    <button class="play2">play</button>
+                    <button class="restart2">restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="nim.js"></script>
+</body>
+
+</html>
